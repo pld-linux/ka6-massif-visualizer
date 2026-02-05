@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.12.1
+%define		kdeappsver	25.12.2
 %define		kframever	6.13.0
 %define		qtver		6.8
 %define		kaname		massif-visualizer
 Summary:	Visualizer for Valgrind Massif
 Name:		ka6-%{kaname}
-Version:	25.12.1
-Release:	2
+Version:	25.12.2
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	007b320fd853c4206a80a57829e9b6a0
+# Source0-md5:	720254882bf30f35db3200dca3491a17
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel
