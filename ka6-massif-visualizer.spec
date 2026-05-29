@@ -39,7 +39,30 @@ Obsoletes:	ka5-%{kaname} < %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Visualizer for Valgrind Massif memory-usage tracking tool.
+Massif Visualizer is a tool that - who'd guess that - visualizes
+massif data. You run your application in Valgrind with --tool=massif
+and then open the generated massif.out.%pid in the visualizer. Gzip or
+Bzip2 compressed massif files can also be opened transparently.
+
+Features:
+- Interactive chart of memory consumption over time.
+- Detailed snapshot analysis with callgraph visualization (requires
+  KGraphViewer).
+- Summary of peak memory consumption of all allocating functions.
+
+%description -l pl.UTF-8
+Program do wizualizacji Massif jest narzędziem, które wizualizuje dane
+massif. Uruchamiasz swoją aplikację w Valgrind przy użyciu
+--tool=massif a następnie otwierasz utworzony massif.out.%pid w
+programie do wizualizacji. Można otwierać pliki massif skompresowane
+przy użyciu Gzip lub Bzip2.
+
+Możliwości:
+- Interaktywny wykres wykorzystania pamięci w czasie.
+- Szczegółowe analizy zrzutów z wizualizacją wykresu wywołań (wymaga
+  KGraphViewer).
+- Podsumowanie szczytowego wykorzystania pamięci wszystkich
+  przydzielonych funkcji.
 
 %prep
 %setup -q -n %{kaname}-%{version}
